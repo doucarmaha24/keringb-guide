@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开云 · 站点产品说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f6f3;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 740px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 12px 32px -8px rgba(0, 0, 0, 0.04);
+      padding: 3rem 2.2rem;
+      transition: padding 0.2s;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 540px) {
+      .page {
+        padding: 2rem 1.25rem;
+        border-radius: 20px;
+      }
+      body {
+        padding: 1rem 0.6rem;
+      }
+    }
+
+    /* 标题层级 — 温和但分明 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 450;
+      letter-spacing: -0.01em;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #1c1c1c;
+      line-height: 1.2;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      color: #5a5a5a;
+      margin-bottom: 2.5rem;
+      font-weight: 380;
+      border-left: 3px solid #d4d2cb;
+      padding-left: 1rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 440;
+      margin-top: 2.8rem;
+      margin-bottom: 1rem;
+      color: #222;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid #ecebe7;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 430;
+      margin-top: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #2b2b2b;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-weight: 380;
+      color: #2e2e2e;
+    }
+
+    a {
+      color: #2c6c9e;
+      text-decoration: none;
+      border-bottom: 1px dotted #b3c9df;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #1a4b70;
+      border-bottom: 1px solid #2c6c9e;
+    }
+
+    /* 卡片 – 轻量、留白 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 2rem;
+      margin: 1.8rem 0 1rem;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      min-width: 180px;
+      background: #fafaf8;
+      padding: 1.4rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid #efede9;
+      transition: box-shadow 0.15s;
+    }
+
+    .feature-item:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 470;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: #1f2c3a;
+    }
+
+    .feature-item span {
+      font-size: 0.95rem;
+      color: #4b4b4b;
+      line-height: 1.5;
+    }
+
+    .scenario-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0.8rem;
+    }
+
+    .scenario-list li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.7rem;
+      color: #2c2c2c;
+    }
+
+    .scenario-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #7f7f7f;
+      font-weight: 700;
+    }
+
+    .note-box {
+      background: #f3f2ef;
+      border-radius: 18px;
+      padding: 1.6rem 1.8rem;
+      margin: 2.2rem 0 1.2rem;
+      border-left: 4px solid #c0bfb6;
+    }
+
+    .note-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq {
+      margin: 2.5rem 0 1rem;
+    }
+
+    .faq-q {
+      font-weight: 460;
+      margin-top: 1.6rem;
+      margin-bottom: 0.2rem;
+      color: #1e2b3a;
+    }
+
+    .faq-a {
+      margin-left: 0.3rem;
+      color: #3d3d3d;
+      border-left: 2px solid #e0ddd6;
+      padding-left: 1rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e3e1db;
+      margin: 2.8rem 0 1.8rem;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: #777671;
+      margin-top: 1.8rem;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>开云</h1>
+  <div class="subhead">一个关于信息聚合与轻量发现的站点</div>
+
+  <p>
+    <strong>开云</strong> 并不是一个典型的资源库或工具平台，它更像一个经过筛选的内容索引 —— 围绕特定领域整理出值得了解的链接、思路和参考。如果你曾经花费不少时间在各类网站之间跳转，却难以找到真正对你有帮助的信息层，那么 <a href="https://keringb.com">开云</a> 提供了一种更安静的整理方式：不追求数量，更看重条理与实用性。
+  </p>
+
+  <!-- 亮点卡片 -->
+  <h2>为什么值得关注</h2>
+  <div class="feature-grid">
+    <div class="feature-item">
+      <strong>主题聚焦</strong>
+      <span>每个整理方向都有明确的边界，不贪多求全，减少信息过载。</span>
+    </div>
+    <div class="feature-item">
+      <strong>表述克制</strong>
+      <span>介绍与推荐保持平实，不渲染焦虑，也不使用夸张用语。</span>
+    </div>
+    <div class="feature-item">
+      <strong>持续微调</strong>
+      <span>内容会依据使用反馈做小幅度更新，保留有价值的链接，去掉低效的入口。</span>
+    </div>
+  </div>
+
+  <!-- 使用建议 -->
+  <h2>适合怎样使用</h2>
+  <p>
+    如果你正在寻找某个话题下的入门指引、工具对比或参考文章，不妨先浏览 <a href="https://keringb.com">开云</a> 的分类索引。它比较适合：
+  </p>
+  <ul class="scenario-list">
+    <li>想快速了解一个陌生领域，但不想从搜索引擎零散拼图的人；</li>
+    <li>对信息质量有一定要求，希望跳开低质重复内容；</li>
+    <li>偶尔需要一些灵感和参考方向，而非拿来即用的模板。</li>
+  </ul>
+  <p>
+    当然，它并不替代深度阅读或专业数据库，而是作为第一层筛选 —— 帮你节省前期摸索的时间，把精力留在真正需要判断的地方。
+  </p>
+
+  <!-- 可信但克制的说明 -->
+  <h2>关于可靠性与局限</h2>
+  <div class="note-box">
+    <p>
+      <strong>内容来源</strong> · 站点上收录的链接均经过人工查看与基础评估，但不对第三方网站的持续准确性、安全性或内容变更负责。建议你在引用或下载前自行核实。
+    </p>
+    <p>
+      <strong>更新节奏</strong> · 站点不定期更新，没有固定排期。部分外部链接可能随着时间失效，若发现链接异常，可以反馈给站点维护者。
+    </p>
+    <p>
+      <strong>立场</strong> · <a href="https://keringb.com">开云</a> 不参与任何商业置换，也不接受付费收录。所有推荐均基于内容本身的相关性与可用性。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <h2>常见疑问</h2>
+  <div class="faq">
+    <div class="faq-q">是否需要注册或登录？</div>
+    <div class="faq-a">不需要。站点以公开页面形式呈现，所有内容可以直接浏览。</div>
+
+    <div class="faq-q">内容有偏好领域吗？</div>
+    <div class="faq-a">目前偏向工具、效率、设计与轻量技术参考，但范围会逐渐调整。</div>
+
+    <div class="faq-q">我可以推荐链接吗？</div>
+    <div class="faq-a">暂时没有公开的提交入口。如果你觉得某个资源很适合收录，可以通过站点上的联系方式（如果有）告知。</div>
+  </div>
+
+  <hr />
+
+  <p style="font-size: 0.95rem; color: #4b4b4b;">
+    最后想说的是：任何索引都只是起点。如果你希望探索更深入的细节，直接打开那些被整理好的链接，亲身感受，比任何描述都更重要。而<strong>开云</strong> 所做的，只是让那个起点稍微清晰一点。
+  </p>
+
+  <div class="footer-note">
+    <a href="https://keringb.com">开云</a> · 保持简单
+  </div>
+
+</div>
+</body>
+</html>
